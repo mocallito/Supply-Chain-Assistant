@@ -6,3 +6,6 @@ langchain-qdrant
 qdrant-client
 python-dotenv
 paho-mqtt
+uvicorn
+fastapi
+pydantic
