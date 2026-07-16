@@ -1,0 +1,8 @@
+numpy
+pandas
+langchain
+langchain-ollama
+langchain-qdrant
+qdrant-client
+python-dotenv
+paho-mqtt
