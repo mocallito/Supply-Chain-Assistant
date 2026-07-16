@@ -5,14 +5,16 @@ from mqtt_client import retrieve_context
 from config import OLLAMA_MODEL
 
 
+
 model = OllamaLLM(
     model=OLLAMA_MODEL
 )
 
 
+
 template = """
 # Context
-You are a question-answering assistant for a pizza restaurant. Your only source of truth is the collection of customer reviews provided below.
+You are a question-answering assistant for a restaurant. Your only source of truth is the collection of customer reviews provided below.
 
 The reviews may contain opinions, personal experiences, conflicting statements, or incomplete information. Treat them as evidence rather than objective facts.
 
@@ -52,21 +54,21 @@ prompt = ChatPromptTemplate.from_template(
 )
 
 
-chain = prompt | model
+chain = (
+    prompt
+    |
+    model
+)
 
 
 
-while True:
+def ask_agent(
+    question: str
+):
 
-    print("\n-------------------------------")
-
-    question = input(
-        "Ask your question (q to quit): "
-    )
-
-    if question == "q":
-        break
-
+    #
+    # Agent decides retrieval is needed
+    #
 
     context = retrieve_context(
         question
@@ -81,14 +83,13 @@ while True:
 
     if not matches:
 
-        print(
-            "No relevant reviews found."
+        return (
+            "I don't know based on "
+            "the provided reviews."
         )
 
-        continue
 
-
-    reviews_text = "\n\n".join(
+    reviews = "\n\n".join(
         [
             item["content"]
             for item in matches
@@ -98,11 +99,10 @@ while True:
 
     result = chain.invoke(
         {
-            "reviews": reviews_text,
-            "question": question,
+            "reviews": reviews,
+            "question": question
         }
     )
 
 
-    print("\n")
-    print(result)
+    return result

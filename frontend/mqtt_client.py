@@ -1,52 +1,26 @@
 import json
 import uuid
-import threading
-
 import paho.mqtt.client as mqtt
 
-from config import (
-    MQTT_BROKER,
-    MQTT_PORT,
-    REQUEST_TOPIC,
-    RESPONSE_TOPIC,
-)
+from config import MQTT_BROKER
 
 
-responses = {}
+response = None
 
 
-def on_message(client, userdata, msg):
 
-    payload = json.loads(
+def on_message(
+    client,
+    userdata,
+    msg
+):
+
+    global response
+
+    response = json.loads(
         msg.payload.decode()
     )
 
-    request_id = payload["request_id"]
-
-    responses[request_id] = payload
-
-
-client = mqtt.Client()
-
-client.on_message = on_message
-
-
-client.connect(
-    MQTT_BROKER,
-    MQTT_PORT
-)
-
-client.subscribe(
-    RESPONSE_TOPIC
-)
-
-
-thread = threading.Thread(
-    target=client.loop_forever,
-    daemon=True,
-)
-
-thread.start()
 
 
 def retrieve_context(
@@ -54,7 +28,31 @@ def retrieve_context(
     top_k: int = 5
 ):
 
+    global response
+
+    response = None
+
+
+    client = mqtt.Client()
+
+    client.on_message = on_message
+
+
+    client.connect(
+        MQTT_BROKER
+    )
+
+
     request_id = str(uuid.uuid4())
+
+    topic = (
+        "query/response"
+    )
+
+
+    client.subscribe(
+        topic
+    )
 
     message = {
         "request_id": request_id,
@@ -62,16 +60,21 @@ def retrieve_context(
         "top_k": top_k,
     }
 
+
     client.publish(
-        REQUEST_TOPIC,
-        json.dumps(message),
+        "query/request",
+        json.dumps(message)
     )
 
 
-    while request_id not in responses:
-        pass
+    while response is None:
+
+        client.loop(
+            timeout=1
+        )
 
 
-    response = responses.pop(request_id)
+    client.disconnect()
+
 
     return response
