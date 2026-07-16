@@ -111,6 +111,21 @@
 
 With the introduction of separate Frontend and Backend machines, the application was restructured into a distributed architecture. Communication between the two systems is handled through MQTT, allowing the Frontend to send requests while the Backend performs retrieval and data access.
 
+## Version 1.0.1
+
+### Infrastructure Changes
+
+* Added a FastAPI-based frontend that allows users to access the system through the `HTTP /chat` endpoint.
+* Modified the MQTT client so that it no longer communicates directly with Qdrant.
+* Updated the agent to receive prompts from the FastAPI server instead of waiting for user input.
+
+### System Architecture
+
+* FastAPI serves as the entry point for all user requests.
+* The agent receives user prompts from the FastAPI server and coordinates the retrieval and response generation process.
+* Ollama is invoked only after the relevant context has been received.
+* The API returns the generated answer as a JSON response.
+
 #### Backend
 
 ```mermaid
@@ -132,23 +147,36 @@ The Backend is responsible for data retrieval and communication with the Qdrant 
 
 ```mermaid
 graph LR
-    Config["config.py"]
-    MQTT["mqtt_client.py"]
+    subgraph Configuration
+        Config["config.py"]
+    end
 
-    Agent["agent.py"]
-    Judge["judge-qual.py"]
-    Eval["eval.py"]
+    subgraph Infrastructure
+        MQTT["mqtt_client.py"]
+    end
 
-    Agent --> Config
+    subgraph Core
+        Agent["agent.py"]
+    end
+
+    subgraph Applications
+        Main["main.py"]
+        Eval["eval.py"]
+        Judge["judge-qual.py"]
+    end
+
+    MQTT --> Config
+
     Agent --> MQTT
+    Agent --> Config
 
-    Eval --> Config
+    Main --> Agent
+
     Eval --> MQTT
-
-    Judge
+    Eval --> Config
 ```
 
-The Frontend hosts the LLM agent, evaluation pipeline, and configuration. Both the agent and evaluation modules communicate with the Backend through MQTT, while the LLM judge remains an independent evaluation component.
+The Frontend is organized into four logical layers: **Configuration**, **Infrastructure**, **Core**, and **Applications**. `main.py` serves as the application's entry point by invoking `agent.py`, which communicates with the Backend through MQTT, while `eval.py` uses the same infrastructure for evaluation tasks. The LLM judge (`judge-qual.py`) remains a standalone evaluation component.
 
 ---
 
@@ -169,3 +197,46 @@ The Frontend hosts the LLM agent, evaluation pipeline, and configuration. Both t
 | CPU | Intel® Core™ i3-6100U @ 2.30 GHz |
 | RAM | 8 GB |
 | Graphics | Intel® HD Graphics 520 (Integrated) |
+
+## Running the System
+
+### Backend (Machine A)
+
+1. Open a terminal on **Machine A**.
+2. Navigate to the backend project directory.
+3. Activate your Python virtual environment.
+4. Start the retrieval service by running:
+
+```bash
+python app.py
+```
+
+### Frontend (Machine B)
+
+1. Open a terminal on **Machine B**.
+2. Navigate to the frontend project directory.
+3. Activate your Python virtual environment.
+4. Start the FastAPI server by running:
+
+```bash
+uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+5. Open a web browser and navigate to:
+
+```text
+http://localhost:8000/docs
+```
+
+6. Expand the **POST /chat** endpoint.
+7. Click **Try it out**.
+8. Enter the following request body:
+
+```json
+{
+  "prompt": "What do customers say about the pepperoni pizza?"
+}
+```
+
+9. Click **Execute**.
+10. The API will return the generated response in JSON format.
