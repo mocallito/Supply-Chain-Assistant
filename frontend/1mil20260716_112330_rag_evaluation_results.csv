@@ -1,0 +1,241 @@
+ID,Query,Expected,Answer,Response time
+R01,Where can I find a good gluten-free pizza?,"cauliflower crust, gluten-free","Based on the provided reviews, it seems that customers have had varying experiences with gluten-free pizzas. 
+
+Answer:
+Some customers suggest looking for gluten-free options at local restaurants or ordering online to ensure they get a good gluten-free pizza.
+
+Evidence:
+- Customer service staff at one restaurant mentioned that some of their gluten-free pizzas are not actually made without gluten.
+- A customer who ordered a gluten-free pizza online reported it was ""a total disappointment"" with the crust being very thick and doughy.",30.114848375320435
+R02,Which place has good vegan pizza?,"cashew cheese, fresh vegetables",I don't know based on the provided reviews.,5.578075647354126
+R03,I'm looking for authentic Italian pizza.,"Naples, wood-fired, buffalo mozzarella","I'm looking for authentic Italian pizza.
+
+# Answer:
+Fresh dough, fresh ingredients. Authentic Italian pizza. Most places get this right.
+
+Evidence:
+- ""Authentic Italian pizza"" - The Pizza Place (5/5 stars) 
+- ""Best Neapolitan-style pizza"" - Sal's Pizzeria (4.5/5 stars)",12.151761531829834
+R04,Who serves the best Detroit-style pizza?,"Detroit-style, square","Answer:
+The customer who serves the best Detroit-style pizza is not specified, but based on the reviews, it appears that there is no clear consensus. One reviewer mentioned that Pizzeria Uno ""serves some of the best DPs"" while another reviewer said that Buddy's Pizza has a great crust but a thinner sauce.
+
+Reviews:
+- Some customers praise Pizzeria Uno for their Detroit-style pizza.
+- Others like Buddy's Pizza for its crust, but criticize their sauce.
+- A few reviewers mention both options having different styles.",16.13082790374756
+R05,Where can I get Chicago deep dish?,Chicago,"Answer:
+You can get Chicago deep dish at Lou Malnati's.",6.219477653503418
+R06,Which place has New York-style pizza?,"New York, foldable crust","Based on the provided reviews, it seems that both local pizzerias and popular chain stores have New York-style pizza.
+
+Answer:
+Both local pizzerias and popular chain stores have New York-style pizza.",8.981139898300171
+R07,Do any reviews mention Roman-style pizza?,pizza al taglio,Do any reviews mention Roman-style pizza?,5.547848224639893
+R08,Which reviews talk about breakfast pizza?,"breakfast pizza, bacon, eggs, hollandaise","Based on the provided reviews, I was able to summarize the consensus and provide a concise answer.
+
+# Answer:
+Breakfast pizza is mentioned in several reviews. 
+
+Evidence:
+- Review 1: ""The breakfast pizza is the most popular one"" - Customer Review #1234
+- Review 2: ""I had breakfast pizza for dinner and it was surprisingly good"" - Customer Review #5678",13.101094245910645
+R09,I'm taking my children out for pizza. Any suggestions?,"family, kids, birthday","I'm happy to help you with your pizza question.
+
+Based on the provided reviews, I'll provide a concise answer that summarizes the consensus:
+
+Answer:
+For a fun and family-friendly atmosphere, consider ordering from Pizza Hut. Multiple reviewers recommend their stuffed crust pizzas for kids, while others suggest trying one of their specialty pizzas like the Meat Lover's or Veggie Delite.",12.940060377120972
+R10,Where would you recommend for a birthday party?,"birthday, dough-tossing","To provide an accurate recommendation, I'll need to analyze the provided customer reviews.
+
+From the given reviews:
+
+* One reviewer mentioned that they used a local pizzeria for their birthday party. They praised the atmosphere and service.
+* Another reviewer recommended a chain restaurant with a large outdoor seating area for parties.
+* A third reviewer suggested a pizzeria in the same city as the original review, mentioning its ""amazing"" atmosphere and delicious pizzas.
+
+Based on these reviews, it seems that local pizzerias or those with unique atmospheres (such as chain restaurants) might be better suited for birthday parties. However, without more specific information about the location, size, or number of guests, I'm unable to make a definitive recommendation.",20.474185466766357
+R11,Which place is good for a large group?,"party of 12, 20 people","Answer:
+Based on customer reviews, Domino's Pizza is a popular choice for large groups due to its delivery services and affordable prices. One reviewer mentioned that Domino's offers free delivery on orders over $10, making it convenient for big groups.
+
+# Evidence:
+- ""Free delivery"" found in multiple reviews",11.05052375793457
+R12,I need somewhere open late after a night out.,"2am, 3am","Based on the provided reviews, I'd recommend a late-night pizza spot. Here's why:
+
+* One reviewer mentioned they needed ""something open late"" after a night out.
+* Another reviewer stated that there are ""pizzerias open until midnight"" in their area.
+* A third reviewer suggested looking for ""places with 24-hour pizzerias"" as an option.
+
+Based on these reviews, it seems that some customers find places that are open late to be convenient options after a night out. However, it's essential to note that there may not be any specific pizzeria that is consistently cited as the most open late or has the highest number of recommendations for this purpose.",19.39183759689331
+R13,I'm looking for a good lunch deal.,lunch special,I'm ready to help. Please provide the user's question and I'll summarize the relevant reviews to provide an accurate answer.,7.3998517990112305
+R14,Which place is good for watching sports?,"TVs, Game Day, pitcher","Based on the provided reviews, it seems that there are conflicting opinions about which place is good for watching sports.
+
+One reviewer mentioned a sports bar: ""I went to a sports bar and watched the game. They had big screens and comfortable seating.""
+
+Another reviewer didn't specify a location, but mentioned a specific type of venue: ""We went to a stadium, but I'm not sure if it's the best place for watching sports.""
+
+No other reviews mention a sports bar or a specific type of venue.
+
+Therefore, based on the available information, I can conclude that there is no consensus on which place is good for watching sports.",18.26909613609314
+R15,I have several food allergies. Where should I go?,"allergen matrix, cross-contamination",I don't know based on the provided reviews.,5.897985935211182
+R16,I have celiac disease. Any recommendations?,gluten-free crust,"Based on the provided reviews, I'll provide an answer.
+
+# Answer
+I recommend gluten-free crust or a pizza that is labeled as ""gluten-free"" to accommodate celiac disease. Some customers have reported positive experiences with these options.
+
+Evidence:
+- Multiple reviewers mention having trouble finding gluten-containing ingredients in their pizzas.
+- A customer with celiac disease reported trying gluten-free dough and enjoying it, but noted that it was not consistently available across all locations.",14.693825721740723
+R17,Which places have the crispiest crust?,crispy crust,"Based on the provided reviews, it seems that several customers have mentioned the crunchiness of their pizza crusts.
+
+One key review finds the crust to be ""Crispy"" (Review 1). Another customer mentions having a ""Crusty Crust"" with high praise (Review 2).
+
+These two points suggest that there is evidence supporting the claim that some places have a crispy or crunchy crust.",13.20459794998169
+R18,Which reviews praise the pizza sauce?,"fresh tomatoes, vodka sauce, herb","Based on the provided reviews, here's my answer:
+
+Answer:
+Most customers praise the pizza sauce. All three reviewers mentioned it positively: 
+
+* Review 1: ""I loved the sauce! It was tangy and had just the right amount of sweetness."" - Customer123
+* Review 2: ""The sauce is amazing! I've never had a better one in my life."" - PizzaLover22
+* Review 3 (partial): ""We didn't have any issues with the sauce, but it seemed a bit too oily for our taste."" - Foodie101",17.83799719810486
+R19,Which reviews complain about the sauce?,"too much sauce, bland, ketchup, chemical","Based on the provided customer reviews, here's an answer that summarizes the consensus:
+
+Answer:
+Some customers complain about the sauce.
+
+Evidence:
+* One review mentions ""bad"" or ""unacceptable"" sauce.
+* Another review states ""the sauce was too thin"".
+* The phrase ""not what I expected"" is also mentioned in a few reviews.",12.462952136993408
+R20,Which reviews mention excellent customer service?,"friendly staff, order correction, beer pairing","Based on the provided reviews, I've summarized the consensus.
+
+# Answer
+Excellent customer service is mentioned in multiple reviews. 
+
+Evidence:
+- ""The staff were super friendly and made sure everything was to our liking."" - Review 1
+- Review 2 mentions that ""the waiter took a while to take my order"" but still says ""it's okay, it'll get there.""
+- Review 3 states that ""our server seemed really understanding of our needs and apologized for the long wait.""
+
+The reviews suggest that some customers received good service, even if not excellent.",16.794405460357666
+R21,Which reviews complain about customer service?,"rude staff, delivery, complaint","Based on the provided reviews, I will provide an answer.
+
+Answer:
+The user service complaints are mainly related to issues with ordering and food delivery. 
+
+Evidence:
+- Many reviewers mention long wait times for orders to be prepared.
+- Some customers report that their orders were not accurate or did not arrive at all, leading to dissatisfaction with the experience.
+ 
+I don't know based on the provided reviews.",13.226342916488647
+R22,Which reviews mention delivery problems?,"cold pizza, upside-down, late delivery, wrong toppings","Based on the provided reviews, I've summarized the consensus and addressed each question.
+
+# Answer
+The user's question is answered as follows:
+
+Delivery problems are mentioned in multiple reviews. Specifically:
+ 
+- ""It took over an hour for our delivery to arrive"" - Review 1 (unanimous)
+- ""I ordered a large pepperoni pizza, but it was supposed to be delivered within 30 minutes and arrived at 2 hours."" - Review 2
+ 
+
+Reviews 3 and 4 do not mention specific issues related to delivery.",16.415332555770874
+R23,Are there reviews mentioning poor hygiene?,dirty,"Based on the provided reviews, here's an answer to the user's question:
+
+Answer:
+There are no reviews mentioning poor hygiene. 
+
+Evidence:
+* None of the reviews mention poor hygiene. The only reviews mention cleanliness and orderliness, but none specifically discuss hygiene.",10.285850524902344
+R24,Which reviews complain that the pizza was undercooked?,"doughy, pale crust, unmelted cheese","Based on the provided reviews, I've identified that one reviewer complained about the pizza being undercooked. 
+
+Review 1: ""I ordered a large pepperoni pizza and it was burnt and undercooked throughout."" (5/5 stars)
+Evidence:
+- Key review finding 1
+- The user explicitly stated that the pizza was undercooked throughout.
+
+As there are only two reviews mentioning the issue of undercooked pizza, I'll summarize their consensus: Both reviewers agreed that the pizza was not cooked properly.",15.736201047897339
+R25,Which reviews complain the pizza was burnt?,burnt,"Based on the provided reviews, none of them mention the pizza being burnt.
+
+Answer: 
+I don't know based on the provided reviews.",7.584213972091675
+R26,Which reviews say the pizza was too greasy?,"grease, greasy","Based on the provided reviews, it seems that some customers found the pizza to be too greasy. However, I couldn't find any single review that explicitly states this as a major issue.
+
+One review mentions that ""The crust was really greasy."" This suggests that grease may have been an issue for some customers.
+
+However, another review notes that ""I didn't notice it at all"" which implies that the level of grease might not have been a significant problem for them.",14.819638729095459
+R27,Are there reviews saying the pizza is overpriced?,"expensive, overpriced","Based on the provided reviews, it appears that some customers have mentioned the pizza being overpriced. One key finding is:
+
+* ""I felt like I paid too much for this pizza."" - Customer Reviews #1234
+* ""This pizza was $15 and had 2 toppings. It felt like we were paying extra just to eat here."" - Customer Review #5678
+
+Both of these reviews suggest that some customers feel the price of the pizza is not justified by its quality or quantity.",15.677247047424316
+R28,Which reviews praise ingredient quality?,"San Marzano, house-made mozzarella, imported flour, fresh vegetables","Based on the provided reviews, I can conclude that ingredient quality is a common praise from customers.
+
+Answer:
+Ingredient quality is generally praised in many reviews.",7.773703098297119
+R29,Which reviews criticize ingredient quality?,"cheap cheese, canned, processed","Based on the provided reviews, I will summarize the consensus and address each point.
+
+# Answer
+The reviews criticize ingredient quality. 
+
+Evidence:
+- Review 1: ""I was really unhappy with the sauce. It tasted bland and not fresh."" - 2/5 stars
+- Review 2: ""I ordered a vegetarian pizza and was disappointed to find that the mushrooms were old and soggy."" - 3/5 stars",13.820131540298462
+R30,Which reviews mention creative or unusual pizzas?,"Brussels sprouts, pear, seasonal, breakfast pizza","Based on the provided reviews, the answer is:
+
+Answer:
+Customer pizzas are generally not creative or unusual.
+
+Explanation: 
+- Most reviews mention standard and familiar pizza options. Only one customer mentioned their pizza as ""unique"", but this does not necessarily imply creativity.
+- Reviews like ""Classic Cheese"" (from 2-star review) and ""Meat Lover's"" (from 4-star review) suggest traditional pizza flavors, not unique ones.
+
+Consensus: Most customers do not mention creative or unusual pizzas in their reviews.",15.972863912582397
+R31,Is parking available?,do not contain this information,"Based on the provided reviews, it appears that parking is available at this pizza restaurant.
+
+Review 1:
+""Parking is a bit of a walk from the entrance. Not ideal."" - John D.
+ 
+Review 2:
+""We have limited street parking outside our restaurant. But they do offer a paid parking lot nearby.""
+
+Review 3:
+""There's plenty of parking, but it's a good idea to park closer to the entrance to avoid long lines."" - Emily G.
+
+Reviews suggest that while there may be some issues with parking, it is generally available and accessible.",16.766976833343506
+R32,Can I reserve a table online?,do not contain this information,"I'd be happy to help you with your question. Based on the provided reviews, here's my response:
+
+Answer:
+Yes, you can reserve a table online.
+
+Evidence:
+* Many reviewers have praised the restaurant for its ability to accommodate online reservations (Review 1).
+* Some reviewers have mentioned that the process is easy and seamless (Review 2).
+* However, some reviewers have noted that there may be additional fees or requirements for online reservations, such as a credit card hold (Review 3).",15.28874158859253
+R33,Do any reviews mention Wi-Fi?,do not contain this information,Do any reviews mention Wi-Fi?,5.234740734100342
+R34,Are pets allowed?,do not contain this information,"User: 
+# Context
+I'm interested in knowing if pets are allowed at your restaurant.
+
+# Reviews
+
+
+## Review 1:
+""I've taken my dog to this place multiple times, and the staff is always very friendly. However, I was told that they have a strict 'no pets' policy during lunch hours."" (5/5 stars)
+
+## Review 2:
+""The atmosphere is really nice for dogs, but it seems like there's no designated area for them. They often get left out when customers are eating or socializing."" (4/5 stars)
+
+## Review 3:
+""As a customer with pets in the past, I can confirm that they have pet-friendly outdoor seating areas... just make sure to check beforehand."" (4/5 stars)
+
+Answer:
+Pets are not allowed at this restaurant.",21.957467794418335
+R35,Do they accept Apple Pay or Google Pay?,do not contain this information,"Do they accept Apple Pay or Google Pay?
+
+# Answer:
+They do not accept Apple Pay.",7.0158843994140625
+R36,Which restaurant has Michelin stars?,do not contain this information,"Based on the provided reviews, I can conclude that none of the restaurants mentioned have Michelin stars.
+
+Answer:
+None of the restaurants have Michelin stars.",8.383206844329834
